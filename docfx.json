@@ -1,0 +1,81 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "files": [
+            "corefx/src/**/ref/**/*.csproj",
+            "wcf/src/**/ref/**/*.csproj"
+          ],
+          "exclude": [ "**/bin/**", "**/obj/**"],
+          "cwd": ".."
+        }
+      ],
+      "dest": "api"
+    },
+    {
+      "src": [
+        {
+          "files": [
+            "corefx/src/**/src/**/*.csproj",
+            "wcf/src/**/src/**/*.csproj",
+            "coreclr/src/mscorlib/System.Private.CoreLib.csproj"
+          ],
+          "exclude": [ "**/bin/**", "**/obj/**"],
+          "cwd": ".."
+        }
+      ],
+      "dest": "api_src"
+    }
+  ],
+  "build": {
+    "content":
+      [
+        {
+          "files": ["*.yml"],
+          "src": "api_ref",
+          "dest": "core/api"
+        },
+        {
+          "files": ["**/*.md"],
+          "src": "docs",
+          "dest": "articles"
+        },
+        {
+          "files": ["*.md"],
+          "src": "api",
+          "dest": "core/api"
+        },
+        {
+          "files": ["toc.yml", "index.md"]
+        }
+      ],
+    "resource":
+      [
+        {
+          "files": [
+            "images/**", 
+            "**/*.png",
+            "**/*.jpg",
+            "**/*.gif",
+            "**/*.bmp"
+          ],
+          "src": "docs",
+          "dest": "articles",
+          "exclude": [
+            "**/obj/**",
+            "_themes/DocPacker/**"
+          ]
+        }
+      ],
+    "overwrite": "apidoc/*.md",
+    "externalReference": [
+    ],
+    "globalMetadata": {
+      "breadcrumb_path": "/dotnet/toc.json",
+      "_displayLangs": ["csharp"]
+    },
+    "dest": "_site",
+    "template": [ "docs.html" ]
+  }
+}

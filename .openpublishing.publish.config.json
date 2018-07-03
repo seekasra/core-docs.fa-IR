@@ -1,0 +1,48 @@
+{
+  "docsets_to_publish": [
+    {
+      "docset_name": "core-docs",
+      "build_source_folder": ".",
+      "build_output_subfolder": ".",
+      "locale": "fa-IR",
+      "open_to_public_contributors": false,
+      "build_entry_point": "docs",
+      "version": 0
+    }
+  ],
+  "notification_subscribers": [],
+  "branches_to_filter": [
+    "live-sxs",
+    "master-sxs"
+  ],
+  "git_repository_url_open_to_public_contributors": "https://github.com/dotnet/core-docs",
+  "git_repository_branch_open_to_public_contributors": "master",
+  "continue_with_document_error": true,
+  "skip_source_output_uploading": false,
+  "dependent_repositories": [
+    {
+      "path_to_root": "_themes",
+      "url": "https://github.com/Microsoft/templates.docs.msft.fa-IR",
+      "branch": "master",
+      "branch_mapping": {}
+    },
+    {
+      "path_to_root": "api_ref",
+      "url": "https://github.com/docascode/coreapi.git",
+      "branch": "master",
+      "branch_mapping": {}
+    },
+    {
+      "path_to_root": "_repo.en-us",
+      "url": "https://github.com/OpenLocalizationTest/core-docs",
+      "branch": "live",
+      "branch_mapping": {
+        "live": "live",
+        "master": "master"
+      }
+    }
+  ],
+  "need_generate_pdf_url_template": false,
+  "need_generate_pdf": false,
+  "need_generate_intellisense": false
+}
