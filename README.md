@@ -10,3 +10,8 @@ Samples
 Current build status for .NET core samples:
 
 ![](https://dendeli-ms.visualstudio.com/_apis/public/build/definitions/9fc8ed28-e0a3-4cde-b7a6-a977d004e315/1/badge)
+
+
+
+.Net Framework مقدمات
+
